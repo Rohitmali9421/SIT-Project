@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
-import ProductCard from './components/ProductCard';
+import ProductGrid from './components/ProductGrid';
 
 function App() {
   useEffect(() => {
@@ -16,12 +16,8 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
-      <div className='flex flex-wrap'> 
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard /> 
-      </div>
+      <ProductGrid />
+     
       
 
       {/* Full-screen model viewer for AR */}
