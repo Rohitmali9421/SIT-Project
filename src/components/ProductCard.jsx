@@ -1,6 +1,16 @@
 import React from 'react';
 
 const ProductCard = () => {
+  const handleARClick = () => {
+    const modelViewer = document.getElementById('ar-model-viewer');
+    
+    // Set the correct model source
+    modelViewer.setAttribute('src', 'https://res.cloudinary.com/dhturqqs5/image/upload/v1728654668/SIT%20Project/hslyyj3edosdaplfuaui.glb');
+    
+    // Display model viewer and activate AR
+    modelViewer.activateAR();
+  };
+
   return (
     <div className="product-card bg-white rounded-lg shadow-md p-4 text-center">
       <img
@@ -29,24 +39,19 @@ const ProductCard = () => {
       {/* AR Button */}
       <button
         className="ar-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
-        onClick={() => {
-          const modelViewer = document.getElementById('ar-model-viewer');
-          modelViewer.setAttribute('src', 'https://res.cloudinary.com/dhturqqs5/image/upload/v1728654668/SIT%20Project/hslyyj3edosdaplfuaui.glb');
-          modelViewer.style.display = 'block';
-          modelViewer.activateAR();
-        }}
+        onClick={handleARClick}
       >
         View in AR
       </button>
 
-      {/* Full-screen model viewer for AR */}
+      {/* Hidden AR model viewer for full-screen AR mode */}
       <model-viewer
         id="ar-model-viewer"
         ar
         ar-modes="scene-viewer quick-look webxr"
         camera-controls
         auto-rotate
-        style={{ display: 'none' }} // Initially hidden, displayed when AR button is clicked
+        style={{ display: 'none' }}  // Hidden by default
       ></model-viewer>
     </div>
   );
