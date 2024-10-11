@@ -45,7 +45,6 @@ const ProductCard = () => {
                     width: '100%',
                     height: '300px',
                     marginBottom: '15px',
-                    display: isModelLoaded ? 'block' : 'none'  // Hide model until it's fully loaded
                 }}
             ></model-viewer>
 
