@@ -1,6 +1,7 @@
 import React from 'react';
 
 const ProductCard = ({imageURL3d,imgaeUrl ,title}) => {
+console.log(imageURL3d);
 
   // Handle the AR button click to activate AR mode
   const handleARClick = () => {
