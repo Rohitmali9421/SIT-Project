@@ -1,26 +1,25 @@
 import React from 'react';
 
-const ProductCard = ({imageURL3d,imgaeUrl ,title}) => {
-console.log(imageURL3d);
+const ProductCard = ({ imageURL3d, imageUrl, title }) => {
 
   // Handle the AR button click to activate AR mode
   const handleARClick = () => {
     const modelViewer = document.getElementById('ar-model-viewer');
-    modelViewer.setAttribute('src', {imageURL3d});
+    modelViewer.setAttribute('src', imageURL3d);
     modelViewer.activateAR(); // Trigger AR mode
   };
 
   return (
-    <div className="product-card bg-white rounded-lg shadow-lg p-6 flex flex-col justify-between">
+    <div className="product-card bg-white rounded-lg shadow-md p-4 text-center">
       {/* Product Image */}
       <img
-        className="product-image mb-4 rounded-lg object-contain h-48 w-full"
-        src={imgaeUrl} 
-        alt="LED Screen Placeholder"
+        className="product-image mb-4 rounded-md object-cover h-48 w-full"
+        src={imageUrl}
+        alt={`${title} Placeholder`}
       />
 
       {/* Product Title */}
-      <h2 className="text-2xl font-semibold text-gray-800 mb-2 text-center">{title}</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mb-2">{title}</h2>
 
       {/* AR Button */}
       <button
@@ -37,7 +36,7 @@ console.log(imageURL3d);
         ar-modes="scene-viewer quick-look webxr"
         camera-controls
         auto-rotate
-        style={{ display: 'none' }}  
+        style={{ display: 'none' }}
       ></model-viewer>
     </div>
   );
