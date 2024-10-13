@@ -1,51 +1,37 @@
-import React, { useEffect } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Footer from './components/Footer';
-import ProductGrid from './components/ProductGrid';
-
-function App() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'module';
-    script.src = 'https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js';
-    document.head.appendChild(script);
-  }, []);
-
-  return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <ProductGrid />
-     
-      
-
-      {/* Full-screen model viewer for AR */}
-      <model-viewer
-        id="ar-model-viewer"
-        ar-modes="scene-viewer quick-look webxr"
-        ar
-        disable-tap
-        disable-pan
-        camera-controls
-        touch-action="pan-y"
-        auto-rotate
-        xr-environment
-        style={{
-          display: 'none', // Initially hidden
-          width: '100%',
-          height: '100vh',
-          position: 'fixed',
-          top: '0',
-          left: '0',
-          zIndex: '1000',
-          backgroundColor: 'rgba(0, 0, 0, 0.8)',
-        }}
-      ></model-viewer>
-
-      <Footer />
-    </div>
-  );
-}
-
-export default App;
+import React from 'react';
+import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './components/Home/Home';
+import ProductFilter from './components/Product/ProductFilter';
+import ProductDetail from './components/Product/Productdetail';
+import Support from './components/Support/Support';
+import About from './components/About/About';
+import AdminDashboard from './components/AdminDashboard/AdminDashboard';
+import Dashboard from './components/AdminDashboard/Dashboard';
+import Products from './components/AdminDashboard/Products';
+import AddProduct from './components/AdminDashboard/AddProduct';
+import EditProduct from './components/AdminDashboard/EditProducts';
+import Category from './components/AdminDashboard/Category';
+import Orders from './components/AdminDashboard/Orders';
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path='/' element={<Layout />} >
+        <Route path='' element={<Home />} />
+        <Route path='products' element={<ProductFilter />} />
+        <Route path='products/:id' element={<ProductDetail />} />
+        <Route path='support' element={<Support />} />
+        <Route path='about' element={<About />} />
+      </Route>
+      <Route path="/admin" element={<AdminDashboard />}>
+        <Route path="" element={<Dashboard />} />
+        <Route path="products" element={<Products />} />
+        <Route path="products/add" element={<AddProduct />} />
+        <Route path="products/edit/:id" element={<EditProduct />} />
+        <Route path="category" element={<Category />} />
+        <Route path="orders" element={<Orders />} />
+      </Route>
+    </>
+  )
+);
+export default router
