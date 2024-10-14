@@ -56,12 +56,12 @@ function ProductDetail() {
               />
               <model-viewer
                 id="ar-model-viewer"
-                src={product.image3d.url} // Set the 3D model source here
+                src={product.image3d.url} 
                 ar
                 ar-modes="scene-viewer quick-look webxr"
                 camera-controls
                 auto-rotate
-                style={{ display: 'none'}} // Adjust dimensions if needed
+                style={{ display: 'none'}} 
               ></model-viewer>
             </div>
 
