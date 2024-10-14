@@ -14,8 +14,8 @@ function ProductCard({ product }) {
         </div>
         <h3 className="mt-4 text-sm text-gray-700">{product.title}</h3>
         <div className="flex justify-between mt-1">
-          <p className="text-lg font-medium text-gray-900">${product.price}</p>
-          <button className="bg-gray-200 px-3 rounded-sm">Add to cart</button>
+          <p className="text-lg font-medium text-gray-900">₹{product.price}</p>
+          {/* <button className="bg-gray-200 px-3 rounded-sm">Add to cart</button> */}
         </div>
       </Link>
     </div>

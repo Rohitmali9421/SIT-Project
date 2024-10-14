@@ -13,6 +13,7 @@ import AddProduct from './components/AdminDashboard/AddProduct';
 import EditProduct from './components/AdminDashboard/EditProducts';
 import Category from './components/AdminDashboard/Category';
 import Orders from './components/AdminDashboard/Orders';
+import Cart from './components/Cart/Cart';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
         <Route path='products/:id' element={<ProductDetail />} />
         <Route path='support' element={<Support />} />
         <Route path='about' element={<About />} />
+        <Route path='cart' element={<Cart />} />
       </Route>
       <Route path="/admin" element={<AdminDashboard />}>
         <Route path="" element={<Dashboard />} />

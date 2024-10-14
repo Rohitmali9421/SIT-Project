@@ -4,6 +4,7 @@ const express = require("express");
 const UserRouter = require("./Routes/User");
 const ProductRouter = require("./Routes/Product");
 const CategoryRouter = require("./Routes/Category");
+const OrderRouter = require("./Routes/Order");
 const connectMongoDB = require("./config/connection");
 
 const port = process.env.PORT || 8000;
@@ -25,6 +26,7 @@ app.get("/",(req,res)=>{
 app.use("/user", UserRouter);
 app.use("/api", CategoryRouter);
 app.use("/api", ProductRouter);
+app.use("/api", OrderRouter);
 
 app.listen(port, () => {
   console.log("server started");

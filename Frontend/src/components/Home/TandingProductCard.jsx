@@ -17,7 +17,7 @@ function TandingProductCard({ product }) {
           </div>
           <div>
             <span className="mb-[10px] block text-lg font-semibold text-dark">
-              ${product.price} {/* Display the product price dynamically */}
+            ₹{product.price} {/* Display the product price dynamically */}
             </span>
 
             <h3>

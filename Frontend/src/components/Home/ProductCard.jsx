@@ -49,7 +49,7 @@ function ProductCard() {
                     </div>
                     <div className="border-l border-stroke px-3 py-4 xs:px-4 lg:px-3 xl:px-6">
                         <span className="text-base font-semibold text-dark">
-                            $299
+                            ₹299
                         </span>
                     </div>
                 </div>
