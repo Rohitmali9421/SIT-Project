@@ -35,19 +35,19 @@ function AdminDashboard() {
                 </div>
                 <div className='flex flex-col justify-between px-4 h-full'>
                     <ul>
-                        <Link to="/admin">
+                        <Link to="/admin" onClick={handleMenuToggle}>
                             <li className='flex items-center my-3 bg-transparent hover:bg-blue-50 rounded-md px-4 py-2'>
                                 <MdDashboard className='text-xl text-blue-500 mr-3' />
                                 <h1 className='font-bold'>Dashboard</h1>
                             </li>
                         </Link>
-                        <Link to="/admin/products">
+                        <Link to="/admin/products" onClick={handleMenuToggle}>
                             <li className='flex items-center my-3 hover:bg-blue-50 rounded-md px-4 py-2'>
                                 <FaBoxOpen className='text-xl text-blue-500 mr-3' />
                                 <h1 className='font-bold'>Menu</h1>
                             </li>
                         </Link>
-                        <Link to="/admin/category">
+                        <Link to="/admin/category" onClick={handleMenuToggle}>
                             <li className='flex items-center my-3 hover:bg-blue-50 rounded-md px-4 py-2'>
                                 <IoMdCart className='text-xl text-blue-500 mr-3' />
                                 <h1 className='font-bold'>Category</h1>

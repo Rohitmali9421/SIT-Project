@@ -23,7 +23,7 @@ function About() {
                                     Whether it's a family feast, late-night snack, or a meal for one,
                                     we make it easy to order your favorite food anytime, anywhere.
                                 </p>
-                                <a href="javascript:void(0)"
+                                <a href="/"
                                     className="inline-flex items-center justify-center rounded-md border border-transparent bg-primary px-7 py-3 text-center text-base font-medium text-white hover:bg-opacity-90 bg-orange-500">
                                     Order Now
                                 </a>

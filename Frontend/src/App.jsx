@@ -2,7 +2,6 @@ import React from 'react';
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home/Home';
-import ProductFilter from './components/Product/ProductFilter';
 import ProductDetail from './components/Product/Productdetail';
 import Support from './components/Support/Support';
 import About from './components/About/About';
@@ -14,12 +13,13 @@ import EditProduct from './components/AdminDashboard/EditProducts';
 import Category from './components/AdminDashboard/Category';
 import Orders from './components/AdminDashboard/Orders';
 import Cart from './components/Cart/Cart';
+import Productlist from './components/Product/ProductList';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path='/' element={<Layout />} >
         <Route path='' element={<Home />} />
-        <Route path='products' element={<ProductFilter />} />
+        <Route path='products' element={<Productlist />} />
         <Route path='products/:id' element={<ProductDetail />} />
         <Route path='support' element={<Support />} />
         <Route path='about' element={<About />} />
