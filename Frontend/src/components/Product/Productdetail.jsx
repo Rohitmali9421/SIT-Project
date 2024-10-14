@@ -8,7 +8,6 @@ function ProductDetail() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loader, setLoader] = useState(true);
-  const [show3DModel, setShow3DModel] = useState(true); // Set to true to display 3D model by default
 
   const fetchProduct = async () => {
     try {
@@ -26,7 +25,10 @@ function ProductDetail() {
   }, [id]);
 
   const handleARClick = () => {
-    setShow3DModel(!show3DModel); // Toggle 3D model visibility
+    const modelViewer = document.getElementById('ar-model-viewer');
+    if (modelViewer) {
+      modelViewer.activateAR(); // Trigger AR mode directly
+    }
   };
 
   if (loader) {
@@ -47,23 +49,20 @@ function ProductDetail() {
         <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
             <div className="shrink-0 max-w-md lg:max-w-lg mx-auto">
-              {show3DModel ? (
-                <model-viewer
-                  id="ar-model-viewer"
-                  src={product.image3d.url} // Set the 3D model source here
-                  ar
-                  ar-modes="scene-viewer quick-look webxr"
-                  camera-controls
-                  auto-rotate
-                  style={{ display: 'block' }}
-                ></model-viewer>
-              ) : (
-                <img
-                  className="w-full"
-                  src={product.image.url}
-                  alt={product.title}
-                />
-              )}
+              <img
+                className="w-full"
+                src={product.image.url}
+                alt={product.title}
+              />
+              <model-viewer
+                id="ar-model-viewer"
+                src={product.image3d.url} // Set the 3D model source here
+                ar
+                ar-modes="scene-viewer quick-look webxr"
+                camera-controls
+                auto-rotate
+                style={{ width: '100%', height: '100%' }} // Adjust dimensions if needed
+              ></model-viewer>
             </div>
 
             <div className="mt-6 sm:mt-8 lg:mt-0">
@@ -91,10 +90,10 @@ function ProductDetail() {
                   </a>
                 </div>
               </div>
-              
+
               <div className="mt-6 sm:gap-4 sm:items-center flex sm:mt-8">
                 <button
-                  onClick={() => console.log("Add to cart clicked")}
+                  onClick={() => console.log('Add to cart clicked')}
                   className="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100"
                   role="button"
                 >
@@ -104,10 +103,10 @@ function ProductDetail() {
 
                 <div className="flex mt-4 sm:mt-0 sm:ml-4">
                   <button
-                    onClick={handleARClick} // Toggle view on button click
+                    onClick={handleARClick} // Trigger AR mode when clicked
                     className="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100"
                   >
-                    {show3DModel ? "View as Image" : "View in AR"}
+                    View in AR
                   </button>
                 </div>
               </div>
