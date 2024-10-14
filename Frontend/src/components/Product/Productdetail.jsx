@@ -8,7 +8,7 @@ function ProductDetail() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loader, setLoader] = useState(true);
-  const [show3DModel, setShow3DModel] = useState(false); // State to toggle 3D model view
+  const [show3DModel, setShow3DModel] = useState(true); // Set to true to display 3D model by default
 
   const fetchProduct = async () => {
     try {
