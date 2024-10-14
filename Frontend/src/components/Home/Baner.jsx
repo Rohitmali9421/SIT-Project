@@ -21,7 +21,7 @@ function Banner() {
   useEffect(() => {
     const intervalId = setInterval(nextSlide, 6000); 
 
-    return () => clearInterval(intervalId); // Cleanup on unmount
+    return () => clearInterval(intervalId); 
   }, []);
 
   return (
@@ -43,7 +43,7 @@ function Banner() {
         ))}
       </div>
 
-      {/* Slider indicators */}
+      
       <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
         {images.map((_, index) => (
           <button
@@ -57,7 +57,7 @@ function Banner() {
         ))}
       </div>
 
-      {/* Slider controls */}
+     
       <button
         type="button"
         className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"

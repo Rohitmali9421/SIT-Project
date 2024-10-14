@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FiMenu, FiX, FiShoppingCart } from "react-icons/fi"; // Import icons
+import { FiMenu, FiX, FiShoppingCart } from "react-icons/fi"; 
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex items-center space-x-4">
-            {/* Logo */}
+           
             <div className="flex-shrink-0">
               <NavLink to="/" className="flex">
                 <img
@@ -30,14 +30,9 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Hamburger Menu Button */}
+          
           <div className="flex items-center lg:hidden">
-            <NavLink
-              to="/"
-              className="text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600 flex items-center"
-            >
-              <FiShoppingCart className="w-6 h-6 mr-2" />
-            </NavLink>
+            
             <button
               type="button"
               onClick={toggleMenu}
@@ -47,7 +42,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Links and Icons for large screens */}
+      
           <div className="hidden lg:flex lg:items-center lg:space-x-10">
             <NavLink
               to="/"
@@ -81,7 +76,7 @@ const Navbar = () => {
             </NavLink>
           </div>
 
-          {/* Cart for large screens */}
+          
           
         </nav>
 
@@ -92,35 +87,35 @@ const Navbar = () => {
                 <NavLink
                   to="/"
                   className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-                  onClick={closeMenu} // Close menu on link click
+                  onClick={closeMenu} 
                 >
                   Home
                 </NavLink>
                 <NavLink
                   to="/products"
                   className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-                  onClick={closeMenu} // Close menu on link click
+                  onClick={closeMenu} 
                 >
                   Menu
                 </NavLink>
                 <NavLink
                   to="/about"
                   className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-                  onClick={closeMenu} // Close menu on link click
+                  onClick={closeMenu}
                 >
                   About
                 </NavLink>
                 <NavLink
                   to="/support"
                   className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-                  onClick={closeMenu} // Close menu on link click
+                  onClick={closeMenu}
                 >
                   Support
                 </NavLink>
                 <NavLink
                   to="/admin"
                   className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-                  onClick={closeMenu} // Close menu on link click
+                  onClick={closeMenu} 
                 >
                   Dashboard
                 </NavLink>

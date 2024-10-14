@@ -13,8 +13,8 @@ function Footer() {
             <div className="-mx-4 flex flex-wrap">
               <div className="w-full px-4 md:w-1/2 lg:w-5/12 xl:w-4/12">
                 <div className="mb-16 max-w-[310px]">
-                  <a href="javascript:void(0)" className="mb-9 inline-block">
-                    <img src="https://demo.tailgrids.com/templates/shopper/build/src/assets/images/logo/logo-white.svg" alt="logo" className="max-w-full" />
+                  <a href="/" className="mb-9 inline-block">
+                    <img src="https://res.cloudinary.com/dhturqqs5/image/upload/v1728842111/SIT%20Project/vf7v4ggt9bzkhpfxvrhr.png" alt="logo" className="w-36" />
                   </a>
                   <p className="mb-9 flex items-center text-lg font-semibold text-white">
                     <span className="pr-3">
@@ -41,27 +41,27 @@ function Footer() {
 
                   <ul className="space-y-3">
                     <li>
-                      <a href="javascript:void(0)" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
+                      <a href="/" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
                         Pizzas
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
+                      <a href="/" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
                         Burgers
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
+                      <a href="/" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
                         Desserts
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
+                      <a href="/" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
                         Beverages
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
+                      <a href="/" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
                         Salads
                       </a>
                     </li>
@@ -76,30 +76,21 @@ function Footer() {
 
                   <ul className="space-y-3">
                     <li>
-                      <a href="javascript:void(0)" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
+                      <a href="/" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
                         About Us
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
+                      <a href="/" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
                         Contact Us
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
+                      <a href="/" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
                         FAQ
                       </a>
                     </li>
-                    <li>
-                      <a href="javascript:void(0)" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
-                        Track Your Order
-                      </a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0)" className="text-base text-[#cacbcf] transition-all hover:text-white hover:underline">
-                        Delivery Information
-                      </a>
-                    </li>
+                    
                   </ul>
                 </div>
               </div>
