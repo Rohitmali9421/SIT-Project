@@ -4,18 +4,18 @@ import TandingProductCard from './TandingProductCard';
 
 function TrendingProducts() {
     const [products, setProducts] = useState([]);
-    const [loader, setLoader] = useState(false); // Added loader state
+    const [loader, setLoader] = useState(false);
 
     const fetchProducts = async () => {
         try {
-            setLoader(true); // Set loader to true while fetching data
-            const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/products?price=399`);
+            setLoader(true); 
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/products?category=670cb5f98b6fb68ed8058836`);
         
             setProducts(response.data);
         } catch (error) {
             console.error('Failed to fetch Products info:', error);
         } finally {
-            setLoader(false); // Set loader to false after fetching
+            setLoader(false); 
         }
     };
 
@@ -37,10 +37,10 @@ function TrendingProducts() {
 
             <div className="flex mx-auto md:mx-10 border rounded-lg flex-wrap">
                 {loader ? (
-                    <p>Loading...</p> // Loader message while fetching products
+                    <p>Loading...</p> 
                 ) : (
                     products.map((product) => (
-                        <TandingProductCard key={product.id} product={product} /> // Use the correct key and component
+                        <TandingProductCard key={product._id} product={product} /> 
                     ))
                 )}
             </div>

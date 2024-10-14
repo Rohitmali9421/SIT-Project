@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaStar } from 'react-icons/fa'; // For star icons
+import { FaStar } from 'react-icons/fa'; 
 import { Link } from 'react-router-dom';
 
 function TandingProductCard({ product }) {
@@ -8,29 +8,29 @@ function TandingProductCard({ product }) {
       <div className="my-6">
         <Link to={`/products/${product._id}`}>
           <div className="mb-5 overflow-hidden rounded-md h-64 relative">
-            {/* Set a fixed height and cover the area */}
+           
             <img
-              src={`${product.image.url}?w=300&h=300&c=fill&q=80`} // Use the original image URL
-              alt={product.title} // Updated alt attribute
-              className="w-full h-full object-cover object-center" // Ensure the image covers the container
+              src={`${product.image.url}?w=300&h=300&c=fill&q=80`} 
+              alt={product.title} 
+              className="w-full h-full object-cover object-center" 
             />
           </div>
           <div>
             <span className="mb-[10px] block text-lg font-semibold text-dark">
-            ₹{product.price} {/* Display the product price dynamically */}
+            ₹{product.price} 
             </span>
 
             <h3>
               <a
-                href="javascript:void(0)"
+                href="/"
                 className="mb-2 block text-xl font-semibold text-dark hover:text-primary sm:text-2xl md:text-lg 2xl:text-2xl"
               >
-                {product.name} {/* Display the product name dynamically */}
+                {product.name}
               </a>
             </h3>
             <p className="flex items-center text-base text-body-color">
               <div className="flex items-center gap-1">
-                {/* Render star icons for ratings */}
+                
                 {[...Array(5)].map((_, index) => (
                   <span key={index}>
                     <FaStar color="#FFA645" />

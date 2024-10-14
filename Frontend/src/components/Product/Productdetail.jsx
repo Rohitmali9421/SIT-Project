@@ -27,7 +27,7 @@ function ProductDetail() {
   const handleARClick = () => {
     const modelViewer = document.getElementById('ar-model-viewer');
     if (modelViewer) {
-      modelViewer.activateAR(); // Trigger AR mode directly
+      modelViewer.activateAR(); 
     }
   };
 
@@ -92,18 +92,11 @@ function ProductDetail() {
               </div>
 
               <div className="mt-6 sm:gap-4 sm:items-center flex sm:mt-8">
-                {/* <button
-                  onClick={() => console.log('Add to cart clicked')}
-                  className="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100"
-                  role="button"
-                >
-                  <FaCartPlus className="w-5 h-5 -ms-2 me-2" />
-                  Add to cart
-                </button> */}
+               
 
                 <div className="flex mt-4 sm:mt-0 sm:ml-4">
                   <button
-                    onClick={handleARClick} // Trigger AR mode when clicked
+                    onClick={handleARClick} 
                     className="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100"
                   >
                     View in AR
