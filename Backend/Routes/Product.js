@@ -6,7 +6,6 @@ const {
   handleDeleteProduct,
   handleUpdateProduct,
 } = require("../Controllers/Product");
-const { validateCreateProduct } = require("../middlewares/validation");
 const uploadMiddleware = require("../middlewares/Multer");
 
 router
