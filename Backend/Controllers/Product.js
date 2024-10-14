@@ -47,14 +47,14 @@ class APIFeatures {
 
 async function handleGetProduct(req, res) {
   try {
-    // Initialize the query with Product.find()
+   
     const features = new APIFeatures(
-      Product.find().populate("category"), // Populate 'category' field
+      Product.find().populate("category"), 
       req.query
     )
-      .filtering() // Apply filtering (custom function)
-      .sorting() // Apply sorting (custom function)
-      .pagination(); // Apply pagination (custom function)
+      .filtering() 
+      .sorting() 
+      .pagination(); 
 
     const products = await features.query;
 
