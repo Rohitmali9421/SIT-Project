@@ -14,7 +14,7 @@ function Productlist() {
     } catch (error) {
       console.error('Failed to fetch Products info:', error);
     } finally {
-      setLoader(false); // Set loader to false after fetching data
+      setLoader(false);
     }
   };
 
