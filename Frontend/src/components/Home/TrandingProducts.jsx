@@ -7,7 +7,7 @@ function TrandingProducts() {
 
             <div class="mx-auto mb-12 max-w-[510px] text-center lg:mb-[70px]">
                 <h2 class="mb-4 text-3xl font-bold text-black  sm:text-4xl md:text-[40px]">
-                    Trending Products
+                    Popular Items
                 </h2>
                 <p class="text-base text-body-color ">
                     There are many variations of passages of Lorem Ipsum available

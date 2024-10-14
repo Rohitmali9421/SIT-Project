@@ -9,7 +9,6 @@ function Home() {
     <div>
       <Banner/>
       <Galary/>
-      <LatestProduct/>
       <TrandingProducts/>
     </div>
   )

@@ -19,6 +19,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Routes
+app.get("/",(req,res)=>{
+  res.json("hello")
+})
 app.use("/user", UserRouter);
 app.use("/api", CategoryRouter);
 app.use("/api", ProductRouter);
