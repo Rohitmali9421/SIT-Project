@@ -16,7 +16,7 @@ function Products() {
   const fetchProducts = async () => {
     try {
       setLoader(true);
-      const response = await axios.get('http://localhost:8000/api/products');
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/products`);
       setProducts(response.data);
       setLoader(false);
     } catch (error) {
@@ -30,7 +30,7 @@ function Products() {
       setPopup(false);
       setLoader(true);
       // Ensure the full URL is provided, including the product ID
-      const response = await axios.delete(`http://localhost:8000/api/products/${deleteProductId}`);
+      const response = await axios.delete(`${import.meta.env.VITE_API_URL}/api/products/${deleteProductId}`);
       fetchProducts();  // Refresh the list after deletion
       toast.success(response?.data?.msg);
       setLoader(false);
