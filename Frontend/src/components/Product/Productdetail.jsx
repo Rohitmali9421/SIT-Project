@@ -61,7 +61,7 @@ function ProductDetail() {
                 ar-modes="scene-viewer quick-look webxr"
                 camera-controls
                 auto-rotate
-                style={{ width: '100%', height: '100%' }} // Adjust dimensions if needed
+                style={{ display: 'none'}} // Adjust dimensions if needed
               ></model-viewer>
             </div>
 
