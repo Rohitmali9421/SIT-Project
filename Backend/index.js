@@ -1,7 +1,6 @@
 require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
-const UserRouter = require("./Routes/User");
 const ProductRouter = require("./Routes/Product");
 const CategoryRouter = require("./Routes/Category");
 const OrderRouter = require("./Routes/Order");
@@ -23,7 +22,6 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/",(req,res)=>{
   res.json("hello")
 })
-app.use("/user", UserRouter);
 app.use("/api", CategoryRouter);
 app.use("/api", ProductRouter);
 app.use("/api", OrderRouter);
